@@ -1,0 +1,772 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+}
+
+body {
+    background-color: grey;
+}
+
+/* HEADER */
+.header {
+    background-color: rgb(52, 52, 52);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 10%;
+}
+
+.header .logo {
+    display: flex;
+    align-items: center;
+}
+
+.header .logo img {
+    height: 35px;
+}
+
+.header .logo a {
+    text-decoration: none;
+    padding-left: 15px;
+    color: white;
+}
+
+.header .nav-links {
+    list-style: none;
+}
+
+.header .nav-links li {
+    display: inline-block;
+    position: relative;
+    margin: 0 30px;
+}
+
+.header .nav-links li a {
+    color: rgb(255, 255, 255);
+    display: block;
+    text-decoration: none;
+    font-weight: 700;
+    transition: all 0.5s;
+}
+
+.header .nav-links li a:hover {
+    padding-left: 5px;
+    border-left: 3px solid rgb(255, 255, 255);
+    background-color: rgba(255, 255, 255, 0.253);
+}
+
+.header .nav-links li.dropdown ul.dropdown-menu li {
+    display: block;
+    background-color: rgba(52, 52, 52, 0.619);
+    margin: 2px 0;
+}
+
+.header .nav-links li ul.dropdown-menu {
+    width: auto;
+    position: absolute;
+    z-index: 1;
+    display: none;
+}
+
+.header .nav-links ul.dropdown-menu li {
+    width: 200px;
+    margin: 30px;
+    padding: 10px;
+}
+
+.header .nav-links li ul.dropdown-menu li:hover {
+    background-color: rgb(165, 154, 154);
+}
+
+.header .nav-links li.dropdown:hover ul.dropdown-menu {
+    display: block;
+
+}
+
+.contacto {
+    text-decoration: none;
+    color: white;
+    transition: all 0.5s;
+}
+
+.contacto:hover {
+    border-left: 3px solid black;
+    padding-left: 5px;
+    background-color: rgba(255, 255, 255, 0.253);
+}
+
+/* Section Fondo */
+.fondo {
+    position: relative;
+    height: 100vh;
+}
+
+.video-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.video-container::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+.video-container video {
+    position: relative;
+    top: 50%;
+    left: 50%;
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    transform: translate(-50%, -50%);
+}
+
+.fondo .container-fondo {
+    display: flex;
+    position: absolute;
+    justify-content: center;
+    flex-direction: column;
+    width: 600px;
+    margin: 150px 100px;
+}
+
+.fondo .container-fondo h1 {
+    font-weight: 700;
+    font-size: 60px;
+    color: white;
+}
+
+.fondo .container-fondo .lista {
+    font-weight: 700;
+    padding-top: 50px;
+    color: white;
+
+}
+
+.fondo .container-fondo .lista li {
+    font-size: 30px;
+    margin: 20px 0;
+}
+
+/* CSS PROFESION HTML */
+
+.profcontainer {
+    margin-top: 90px;
+    margin-left: 80px;
+    margin-right: 80px;
+}
+
+.profcontainer h1 {
+    font-size: 2em;
+}
+
+.profcontainer h2 {
+    margin-top: 40px;
+    margin-bottom: 25px;
+    font-size: 1.5em;
+}
+
+.proflista {
+    margin: 30px 100px;
+}
+
+.proflista ul {
+    margin: 20px 0px;
+}
+
+.proflista li {
+    margin: 10px 0;
+}
+
+/* CSS PROFESIONES (ELECTRICISTAS, ETC) */
+
+
+.parte1 {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    min-height: 900px;
+    background-image: url(/static/img/electricistas.png);
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    position: relative;
+}
+
+.parte1::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.4); 
+}
+
+.parte1 .profesiones {
+    display: flex;
+    flex-direction: column;
+    color: white;
+    margin-top: 100px;
+    margin-left: 100px;
+    position: absolute;
+    white-space: initial;
+}
+
+
+.parte1 .profesiones .titulo h1 {
+    display: flex;
+    font-size: 2em;
+    line-height: 1.5;
+    font-weight: 700;
+}
+
+.parte1 .profesiones .descripcion p {
+    display: flex;
+    margin-top: 30px;
+    font-size: 1.2em;
+    line-height: 1.5;
+    margin-bottom: 80px;
+    letter-spacing: 0.2em;
+}
+
+.parte2 {
+    color: black;
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    min-height: 300px;
+    text-align: center;
+    padding: 80px 0;
+}
+
+.parte2 .descripcionexperto {
+    font-size: 1.5em;
+    margin: 0 100px;
+    padding-bottom: 50px;
+}
+
+.parte2 .imagendescripcion {
+    width: 90px;
+}
+
+.parte2 .descripcion__parrafo {
+    padding-top: 20px;
+    text-align: center;
+}
+
+.cards {
+    padding: 40px 0;
+    text-align: center;
+
+}
+
+.cards .cardsencabezado {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.cards .contrataeletricista {
+    font-size: 40px;
+    color: white;
+    margin-bottom: 30px;
+    font-weight: 700;
+    letter-spacing: 0.3em;
+
+}
+
+.cards .cardsencabezado #btnabrirpopup {
+    width: 300px;
+    border-radius: 15px;
+    flex-wrap: wrap;
+    padding: 10px;
+    margin-bottom: 30px;
+
+}
+
+/* Estilos para el popup */
+#popup {
+    display: none;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+}
+
+#popupForm {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    width: 600px;
+    min-height: 200px;
+
+}
+
+#popupForm #form {
+    width: 100%;
+    text-align: left;
+}
+
+.titulopopup{
+    font-size: 35px;
+    margin-bottom: 20px;
+}
+
+#popupForm input {
+    width: 100%;
+    border-radius: 5px;
+    margin-bottom: 15px;
+    margin-top: 10px;
+}
+
+#popupForm button {
+
+    padding: 10px;
+    margin: 5px 0;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 10px;
+}
+
+#popupForm button:hover {
+    background-color: #45a049;
+}
+
+
+.contratar__experto {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+
+}
+
+.tarjetacard {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.card {
+    border: 1px solid lightgray;
+    background-color: white;
+    box-shadow: 2px 2px 8px 4px #d3d3d396;
+    border-radius: 15px;
+    width: 300px;
+    margin: 0 20px 20px 5px;
+    
+}
+
+.titulocard {
+    font-size: 30px;
+    padding: 10px 10px 0 10px;
+    text-align: center;
+}
+
+.cuerpocard {
+    padding: 10px;
+    text-align: center;
+    word-wrap: break-word;
+}
+
+.profciudad{
+    justify-content: center;
+    font-weight: 700;
+    font-size: 30px;
+    text-transform: capitalize;
+    width: 100%;
+    height: auto;
+}
+
+.cuerpocard p {
+    text-align: justify;
+    margin: 10px;
+    min-height: 190px;
+}
+
+.imgcard {
+    width: 120px;
+    height: 150px;
+    border-radius: 50%;
+}
+
+.piecard {
+    background: #6699ff;
+    border-radius: 0 0 15px 15px;
+    padding: 15px;
+    text-align: center;
+}
+
+.piecard a {
+    text-decoration: none;
+    color: white;
+}
+
+.piecard:hover {
+    color: black;
+    background-color: grey;
+}
+
+/* PERFIL TEMPLATES */
+
+.perfil_experto{
+    justify-content: center;
+    display: flex;
+}
+
+.infoexperto{
+    display: flex;
+    flex-direction: column;
+    width: 1200px;
+    background-color: white;
+    height: 100vh;
+    margin-top: 180px;
+}
+
+.fotoexperto{
+    border: 2px solid white;
+    outline: white;
+    width: 200px;
+    height: 200px;
+    margin: 0 20px;
+    position: relative;
+    top: -5%;
+    border-radius: 15px;
+}
+
+.nombre_experto{
+    position: relative;
+    font-size: 48px;
+    margin: 0 20px;
+    font-weight: 700;
+}
+
+.profesion{
+    text-transform: capitalize;
+    margin: 10px 0 0 20px;
+    font-weight: 600;
+    font-size: 1.5em;
+}
+
+.telefono{
+    margin: 20px 20px;
+    font-weight: 600;
+    font-size: 1.5em;
+}
+
+.ciudad{
+    margin: 0px 0px 20px 20px;
+    font-weight: 600;
+    font-size: 1.5em;
+}
+
+.exp_des_experto{
+    margin: 0 20px;
+    text-align: justify;
+    line-height: 1.5;
+}
+
+/* PAGINA NOSOTROS */
+
+.bodynosotros {
+    font-family: Arial, Helvetica, sans-serif;  /* Establece la fuente de texto: primero Arial, luego Helvetica y, si no están disponibles, cualquier fuente sans-serif */
+    background-color: #f4f4f4;  /* Define el color de fondo como un gris muy claro */
+    color: #333;  /* Establece el color del texto como un gris oscuro para asegurar buena legibilidad */
+    margin: 0;  /* Elimina los márgenes predeterminados alrededor del body */
+    padding: 0;  /* Elimina el relleno predeterminado dentro del body */
+    text-align: center;  /* Centra el texto dentro del body */
+}
+
+/* Animación en cascada para el "quienes somos" */
+@keyframes fadeIn {  /* Define una animación llamada 'fadeIn' */
+    from {  /* Define el estado inicial de la animación */
+        opacity: 0;  /* Comienza con una opacidad de 0 (completamente transparente) */
+    }
+
+    to {  /* Define el estado final de la animación */
+        opacity: 1;  /* Termina con una opacidad de 1 (completamente visible) */
+    }
+}
+
+.encabezado {
+    background-color: #33333378;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    animation: fadeIn 3s ease-in-out;
+}
+
+/* Aplica la animación en cascada para el parrafo acercade nosotros */
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.sobre-nosotros h2,
+.sobre-nosotros p {  /* Aplica los estilos a los elementos <h2> y <p> dentro del contenedor con la clase 'sobre-nosotros' */
+    opacity: 0;  /* Comienza con una opacidad de 0 (completamente invisible) */
+    animation: fadeUp 3s ease-out forwards;  /* Aplica la animación 'fadeUp' durante 3 segundos */
+}
+
+.sobre-nosotros h2 { /* Aplica el estilo específicamente al elemento <h2> dentro del contenedor 'sobre-nosotros' */
+    animation-delay: 0.5s; /* Retraso para que el <h2> aparezca primero */
+}
+
+.sobre-nosotros p {
+    animation-delay: 1s;/* Retraso para que el <p> aparezca después del <h2> */
+}
+
+section {
+    padding: 20px;
+}
+
+.sobre-nosotros,
+.mision-vision,
+.team {
+    margin-bottom: 40px;
+}
+
+h2 {
+    color: #050505;
+}
+
+.sobre-nosotros p {
+    font-size: 1.1em;
+    line-height: 1.6;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.mision-vision {
+    background-image: url('/img/nosotros.jpg');
+    /* Coloca aquí la URL de tu imagen */
+    background-attachment: fixed;
+    /* Fija la imagen de fondo cuando se hace scroll */
+    background-size: cover;
+    /* La imagen cubrirá toda la sección sin deformarse */
+    background-position: center;
+    /* Centra la imagen de fondo en la sección */
+    background-repeat: no-repeat;
+    /* Evita que la imagen se repita */
+    color: rgb(250, 250, 250);
+    /* Texto en blanco para contraste */
+    padding: 60px 20px;
+    /* Espaciado alrededor del contenido */
+    position: relative;
+}
+
+/* Capa oscura encima de la imagen de fondo */
+.mision-vision::before {
+    content: ""; /* Crea un contenido vacío antes del elemento, útil para crear elementos decorativos */
+    position: absolute; /* Establece la posición del pseudo-elemento como absoluta respecto al contenedor más cercano con posición relativa */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Capa de oscuridad con opacidad */
+    z-index: 1; /* Asegura que la capa oscura esté encima de la imagen, pero debajo del texto */
+}
+
+.mision-vision h3 {
+    color: #ebeaea; 
+    font-size: 2em;
+    margin-bottom: 20px;
+    z-index: 2;
+    position: relative;
+}
+
+.mision-vision p {
+    color: #ebeaea;
+    font-size: 2em;
+    margin-bottom: 20px;
+    z-index: 2;
+    position: relative;
+}
+
+.mision-vision div {
+    margin: 20px 0;
+}
+
+.mision-vision p {
+    font-size: 1.2em;
+    line-height: 1.6;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.team {
+    display: flex; /* Activa el modelo de diseño Flexbox para el contenedor */
+    flex-direction: column;
+    gap: 30px;
+    flex-wrap: wrap; /* ajusta las fotos de los miembros*/
+    margin-top: 40px;
+    text-align: center;
+}
+
+.team h2 {
+    font-size: 2em;
+    margin-top: 40px;
+    text-align: center;
+}
+
+.team1 {
+    display: flex; 
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+    margin-top: 30px;
+}
+
+.team1 .miembros-team {
+    width: 200px;
+    margin: 0 35px;
+}
+
+.miembros-team img {
+    width: 100%;
+    height: 230px;
+    border-radius: 50%;
+}
+
+/* Estilos para los iconos de redes sociales */
+
+footer{
+    display: inherit;
+}
+
+.iconos-sociales {
+    display: flex;
+    justify-content: center;
+}
+
+.iconos-sociales a {
+    text-decoration: none;
+    margin: 0px 15px;
+    font-size: 1.5em;
+    color: #333;
+}
+
+.iconos-sociales a:hover {
+    color: #007bff; /* Cambia el color al pasar el ratón */
+}
+
+.Contact-text {
+    font-size: 1.2em;
+    color: black;
+    text-align: center;
+}
+
+/* CONTACTO */
+
+.formulario {
+    max-width: 500px; /* Limita el ancho del formulario */
+    margin: 50px auto; /* Centra el formulario horizontal y verticalmente */
+    background-color: #1e1e1e; /* Define un fondo oscuro para el formulario */
+    padding: 25px; /* Agrega espacio interno al formulario */
+    border-radius: 10px; /* Redondea las esquinas del formulario */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.8); /* Agrega una sombra al formulario */
+    animation: fadeIn 1.5s ease-in-out; /* Aplica una animación de entrada al formulario */
+}
+
+.formulario h2 {
+    margin-bottom: 20px; /* Agrega un espacio inferior al título */
+    color: #ff9800; /* Establece un color acento para el título */
+    text-align: center; /* Centra el texto del título */
+}
+
+.formulario label {
+    display: block; /* Hace que los labels ocupen toda la línea */
+    margin-bottom: 5px; /* Agrega espacio debajo del label */
+    font-weight: bold; /* Hace el texto del label en negrita */
+    color: #e0e0e0; /* Establece un color claro para el texto */
+}
+
+.formulario input,
+.formulario textarea {
+    width: 100%; /* Hace que los campos ocupen todo el ancho del contenedor */
+    padding: 10px; /* Agrega espacio interno en los campos */
+    margin-bottom: 15px; /* Agrega espacio inferior entre los campos */
+    border: 1px solid #333; /* Establece un borde oscuro para los campos */
+    border-radius: 5px; /* Redondea las esquinas de los campos */
+    background-color: #2b2b2b; /* Asigna un fondo oscuro a los campos */
+    color: #e0e0e0; /* Define un color claro para el texto de los campos */
+    font-size: 1rem; /* Establece un tamaño estándar para el texto */
+}
+
+.formulario input:focus,
+.formulario textarea:focus {
+    outline: none; /* Elimina el contorno predeterminado al enfocar */
+    border-color: #ff9800; /* Cambia el color del borde al enfocar */
+    box-shadow: 0 0 5px #ff9800; /* Agrega un brillo suave al borde enfocado */
+}
+
+.formulario button {
+    background-color: #ff9800; /* Define un color acento para el botón */
+    color: #121212; /* Asigna un color oscuro para el texto */
+    padding: 12px 20px; /* Agrega relleno interno al botón */
+    border: none; /* Elimina el borde predeterminado */
+    border-radius: 30px; /* Hace las esquinas del botón completamente redondas */
+    font-size: 1rem; /* Define el tamaño estándar del texto */
+    font-weight: bold; /* Hace el texto del botón en negrita */
+    cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Agrega transiciones suaves */
+    box-shadow: 0 5px 15px rgba(255, 152, 0, 0.3); /* Agrega una sombra al botón */
+}
+
+.formulario button:hover {
+    background-color: #e67e22; /* Cambia el color de fondo al pasar el mouse */
+    transform: scale(1.1); /* Agranda el botón al pasar el mouse */
+    box-shadow: 0 8px 20px rgba(255, 152, 0, 0.5); /* Intensifica la sombra del botón */
+}
+
+@keyframes fadeIn { /*define una animación personalizada llamada fadeIn. Esta animación se utiliza para crear un efecto donde un elemento se desvanece al aparecer en pantalla */
+    from {
+        opacity: 0; /* Comienza con el formulario completamente transparente */
+        transform: translateY(20px); /* Desplaza el formulario hacia abajo */
+    }
+    to {
+        opacity: 1; /* El formulario se vuelve completamente visible */
+        transform: translateY(0); /* El formulario regresa a su posición inicial */
+    }
+}
+
+/* CIUDADES */
+
+.ubictitulo{
+    width: auto;
+    text-align: center;
+    margin: 30px 0;
+}
+
+.ubictitulo h1{
+    font-size: 50px;
+    color: white;
+}

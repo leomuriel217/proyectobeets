@@ -1,0 +1,58 @@
+[
+    {
+        "nombre": "Andres Lopez",
+        "descripcion": "Mi experiencia laboral consta de más de 20 años en el campo de la electricidad, he realizado diferentes trabajos en casas y pequeños comercios, tengo mucha experiencia en cableado grueso y etc etc",
+        "telefono": "3206870286",
+        "ciudad": "Pereira",
+        "profesion": "electricista",
+        "imagen": "Andres_Lopez.jpg"
+    },
+    {
+        "nombre": "Diana Hoyos",
+        "descripcion": "Mi experiencia laboral consta de más de 20 años en el campo de la electricidad, he realizado diferentes trabajos en casas y pequeños comercios, tengo mucha experiencia en cableado grueso y etc etc ",
+        "telefono": "3127042073",
+        "ciudad": "Dosquebradas",
+        "profesion": "electricista",
+        "imagen": "Diana_Hoyos.jpg"
+    },
+    {
+        "nombre": "Edwar gonzales",
+        "descripcion": "Mi experiencia laboral consta de más de 20 años en el campo de la electricidad, he realizado diferentes trabajos en casas y pequeños comercios, tengo mucha experiencia en cableado grueso y etc etc",
+        "telefono": "3177000595",
+        "ciudad": "Dosquebradas",
+        "profesion": "fontanero",
+        "imagen": "Edwar_gonzales.png"
+    },
+    {
+        "nombre": "Andres Lopez",
+        "descripcion": "asdasdasd asad  as  as dasdasd asd asd asddasdasdasd asdasdasdasd  asdasdasdasdasd asdasdasdads",
+        "telefono": "3206870286",
+        "ciudad": "Dosquebradas",
+        "profesion": "fontanero",
+        "imagen": "Andres_Lopez_2.jpg"
+    },
+    {
+        "nombre": "Julian Marquez",
+        "descripcion": "asdasdasd asad  as  as dahggiubuonp i j ojsdasd asd asd asddasdasdasd asdasdasdasd  asdasdasdasdasd asdasdasdads",
+        "telefono": "3206870286",
+        "ciudad": "Dosquebradas",
+        "profesion": "fontanero",
+        "imagen": "Julian_Marquez.jpg"
+    },
+    {
+        "nombre": "Andres Lopez",
+        "descripcion": "asdasdasd asad  as  as dahggiubuonp i j ojsdasd asd asd asddasdasdasd asdasdasdasd  asdasdasdasdasd asdasdasdads",
+        "telefono": "3104429724",
+        "ciudad": "Dosquebradas",
+        "profesion": "carpintero",
+        "imagen": "Andres_Lopez_3.jpg"
+    },
+    {
+        "nombre": "Juliana Lopez",
+        "descripcion": "asdasdasd   dasda sda sd asd asdasdaas  asdas dasd  asdasdasdasd  asdasdasdasdasd asdasdasdads",
+        "telefono": "3210940294",
+        "ciudad": "Pereira",
+        "profesion": "carpintero",
+        "imagen": "Juliana_Lopez.png"
+    }
+]

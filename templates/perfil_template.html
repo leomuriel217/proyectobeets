@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perfil de {{ experto['nombre'] }}</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+</head>
+
+<body>
+
+    <header class="header">
+        <div class="logo">
+            <img src="{{url_for('static', filename='img/logo.png')}}" alt="Logo Expertos para tu hogar"><a
+                href="/">Expertos en tu hogar</a>
+        </div>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="/">Inicio</a></li>
+                <li><a href="/nosotros">Nosotros</a></li>
+                <li class="dropdown"><a href="#">Contrata un Experto &#x25BE;</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="/ubicacion">Por Ubicación</a></li>
+                        <li><a href="/profesion">Por Profesión</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+
+        <a href="/contacto" class="contacto">Contacto</a>
+
+    </header>
+
+    <section class="perfil_experto">
+        <div class="infoexperto">
+            <img class="fotoexperto" src="{{ url_for('static', filename='uploads/' + experto['imagen']) }}" alt="imagen del experto">
+            <h1 class="nombre_experto">{{ experto['nombre'] }} </h1>
+            <p class="profesion">Profesión: {{ experto['profesion'] }}</p>
+            <p class="telefono">Teléfono: {{ experto['telefono'] }}</p>
+            <p class="ciudad">Ciudad: {{ experto['ciudad'] }}</p>
+            <p class="exp_des_experto">{{ experto['descripcion'] }}</p>
+        </div>
+    </section>
+
+    <footer>
+        <p style="text-align: center; padding: 20px; background-color: #333; color: white;">&copy; 2024 Empresa. Todos
+            los derechos reservados.</p>
+
+        <!-- Iconos de Redes Sociales -->
+        <div class="social-container">
+            <!-- contenedor para los iconos de redes sociales-->
+            <div class="Contact-text">
+                <p>Contactenos: © 2024 Expertos en tu hogar</p>
+                <hr>
+                <div class="iconos-sociales">
+                    <a href="https://facebook.com" target="_blank" title="Facebook"><i class="fab fa-facebook"></i></a>
+                    <a href="https://instagram.com" target="_blank" title="Instagram"><i
+                            class="fab fa-instagram"></i></a>
+                    <a href="https://www.whatsapp.com" target="_blank" title="WhatsApp"><i
+                            class="fab fa-whatsapp"></i></a>
+                </div>
+    </footer>
+</body>
+
+</html>

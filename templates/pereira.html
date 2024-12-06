@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{{url_for('static',filename ='css/style.css')}}">
+</head>
+
+<body>
+    <header class="header">
+        <div class="logo">
+            <img src="{{url_for('static',filename='img/logo.png')}}" alt="Logo Expertos para tu hogar"><a
+                href="/">Expertos en tu hogar</a>
+        </div>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="/">Inicio</a></li>
+                <li><a href="/nosotros">Nosotros</a></li>
+                <li class="dropdown"><a href="#">Contrata un Experto &#x25BE;</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="/ubicacion">Por Ubicación</a></li>
+                        <li><a href="/profesion">Por Profesión</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+
+        <a href="/contacto" class="contacto">Contacto</a>
+
+    </header>
+
+    <div class="ubictitulo">
+        <h1>Expertos en la ciudad de Pereira</h1>
+    </div>
+
+    <section class="tarjetacard">
+        <div class="pereira">
+            <div class="tarjetacard">
+                {% for experto in expertos %}
+                <div class="card">
+                    <h3 class="titulocard">{{ experto['nombre'] }}</h3>
+                    <div class="cuerpocard">
+                        <img class="imgcard" src="{{ url_for('static', filename='uploads/' + experto['imagen']) }}"
+                            alt="Imagen del experto">
+                        <div class="profciudad">{{ experto['profesion'] }}</div>
+                        <div class="profciudad">Teléfono: {{ experto['telefono'] }}</div>
+                        <p>{{ experto['descripcion'] }}</p>
+                    </div>
+                    <div class="piecard"><a href="{{ url_for('perfil', nombre=experto['nombre']) }}"
+                            target="_blank">Contratar</a></div>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </section>
+</body>
+
+</html>

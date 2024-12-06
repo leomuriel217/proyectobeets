@@ -566,7 +566,7 @@ h2 {
 }
 
 .mision-vision {
-    background-image: url('/img/nosotros.jpg');
+    background-image: url('/static/img/nosotros.jpg');
     /* Coloca aquí la URL de tu imagen */
     background-attachment: fixed;
     /* Fija la imagen de fondo cuando se hace scroll */
